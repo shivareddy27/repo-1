@@ -1,0 +1,17 @@
+#
+# Cookbook Name:: bnsf_artifactory
+# Attributes:: install
+#
+# Copyright:: 2017, Charter, All Rights Reserved.
+#
+
+default['bnsf_artifactory']['install'] = {
+  'HA' => true,
+  'version' => '5.3.2-50047',
+  'rpm' => 'jfrog-artifactory-pro-5.3.2.rpm',
+  'path' => 'http://172.28.191.135/repositories/jfrog/rpms/',
+  'url' => "#{default['bnsf_artifactory']['install']['path']}#{default['bnsf_artifactory']['install']['rpm']}",
+  'postgresql_jar' => 'postgresql-42.1.1.jar',
+  'postgresql_jar_path' => 'http://172.28.191.135/repositories/jfrog/'
+}
+
